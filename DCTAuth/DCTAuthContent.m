@@ -96,6 +96,24 @@
 	return self;
 }
 
+- (instancetype)initWithString:(NSString *)data contentType:(NSString *)contentType {
+    self = [self init];
+    if (!self) return nil;
+
+    _type = DCTAuthContentTypeRaw;
+
+    NSMutableArray *items = [[NSMutableArray alloc] init];
+    [items addObject:data];
+    _items = [items copy];
+    _encoding = NSUTF8StringEncoding;
+
+    _contentType = [contentType copy];
+
+    _HTTPBody = [data dataUsingEncoding:_encoding];
+
+    return self;
+}
+
 - (instancetype)initWithEncoding:(NSStringEncoding)encoding
 							type:(DCTAuthContentType)type
 						   items:(NSArray *)items {

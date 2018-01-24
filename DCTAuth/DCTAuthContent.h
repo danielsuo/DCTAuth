@@ -23,6 +23,7 @@
 
 - (instancetype)initWithRequest:(NSURLRequest *)request;
 - (instancetype)initWithEncoding:(NSStringEncoding)encoding type:(DCTAuthContentType)type items:(NSArray<DCTAuthContentItem *> *)items;
+- (instancetype)initWithString:(NSString *)data contentType:(NSString *)contentType;
 
 @property (nonatomic, readonly) DCTAuthContentType type;
 @property (nonatomic, readonly) NSArray *items;

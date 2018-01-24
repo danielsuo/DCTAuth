@@ -17,5 +17,8 @@ typedef NS_ENUM(NSUInteger, DCTAuthContentType) {
 	DCTAuthContentTypeForm,
 
 	/** Encode as JSON. */
-	DCTAuthContentTypeJSON
+	DCTAuthContentTypeJSON,
+
+    /** Pass through raw UTF-8 string. */
+    DCTAuthContentTypeRaw
 };
